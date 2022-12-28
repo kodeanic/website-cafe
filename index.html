@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cafe</title>
+    <link rel="icon" type="image/jpg" href="img/icon.jpg">
+    <link rel="stylesheet" href="css/index.css">
+</head>
+<body>
+    <div id="header">
+        <div class="header-container">
+            <img class="header-container__logo" src="img/icon.jpg"/>
+            <div class="header-container__title">Кафе "Los Pollos Hermanos"</div>
+        </div>
+        <div class="header-menu">
+            <button class="menu_btn" onclick="headerPage.showElement(ROOT_FOOD)">Меню</button>
+            <button class="menu_btn" onclick="headerPage.showElement(ROOT_DELIVERY)">Доставка</button>
+            <button class="menu_btn" onclick="headerPage.showElement(ROOT_STOCK)">Акции</button>
+            <button class="menu_btn__cart" id="shop_btn" onclick="headerPage.showElement(ROOT_SHOPPING)">Корзина 0 руб.</button>
+        </div>
+    </div>
+    <div id="food">
+        <div class="categories-menu">
+            <button class="ctg_btn" onclick="foodPage.render('hotfood')">
+            Горячие блюда
+            </button>
+            <button class="ctg_btn" onclick="foodPage.render('coldfood')">
+            Холодные блюда
+            </button>
+            <button class="ctg_btn" onclick="foodPage.render('drink')">
+            Напитки
+            </button>
+            <button class="ctg_btn" onclick="foodPage.render('sause')">
+            Соусы
+            </button>
+            </button>
+            <button class="ctg_btn__del" onclick="foodPage.render(null)">
+            Сбросить фильтр
+            </button>
+        </div>
+        <div id="food_menu"></div>
+    </div>
+    <div hidden id="delivery">
+        <table>
+            <tr>
+                <td>
+                    <fieldset class="map_txt">
+                        <p>Бесплатная доставка по городу при заказе от 450 рублей.</p>
+                        <p></p>
+                        <p>Доставка от 500 рублей, если вы находитесь за пределами города.</p>
+                        <p></p>
+                        <p>Вы также можете забрать заказ бесплатно из ресторана.</p>
+                        <p>Мы находимся по адресу проспект Ленина 85А или Комсомольский проспект 14А.</p>
+                        <p></p>
+                        <p>Номер телефона:</p>
+                        <p>+7 (123) 456 78 90</p>
+                    </fieldset>
+                </td>
+                <td></td>
+
+                <td>
+                    <div class="map" style="position:relative;overflow:hidden;">
+                        <iframe src="https://yandex.ru/map-widget/v1/-/CCUjAOepxD" width="560" height="400" frameborder="1" allowfullscreen="true" style="position:relative;">
+                        </iframe>
+                    </div>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div hidden id="stock"></div>
+    <div hidden id="shopping">
+        <div id="shopping_cart"></div>
+        <fieldset>
+            <legend>Выберите способ оплаты:</legend>
+            <div>
+                <input type="radio" id="cash" name="pay" value="cash">
+                <label for="cash">Наличными</label>
+            </div>
+            <div>
+            </div>
+            <div>
+                <input type="radio" id="card" name="pay" value="card">
+                <label for="card">Картой</label>
+            </div>
+        </fieldset>
+        <div>
+            <table>
+                <tr>
+                    <td>Введите ваши данные:</td>
+                </tr>
+                <tr>
+                    <td>Номер телефона:</td>
+                    <td><input type="text" id="numb" size="40" placeholder="+7 123 456 78 90"></td>
+                </tr>
+                <tr>
+                    <td>Адрес доставки:</td>
+                    <td><input type="text" id="addr" size="40" placeholder="Вершинина, д. 1, кв. 8"></td>
+                </tr>
+            </table>
+        <div>
+        <button class="order__btn" onclick="shoppingPage.createOrder()">Сделать заказ</button>
+    </div>
+
+    <script src="constants/root.js"></script>
+    <script src="constants/catalog.js"></script>
+    <script src="localStorageUtil.js"></script>
+
+    <script src="components/Header/Header.js"></script>
+    <link rel="stylesheet" href="components/Header/Header.css">
+
+    <script src="components/Food/Food.js"></script>
+    <link rel="stylesheet" href="components/Food/Food.css">
+
+    <script src="components/Shopping/Shopping.js"></script>
+    <link rel="stylesheet" href="components/Shopping/Shopping.css">
+
+    <link rel="stylesheet" href="components/Delivery/Delivery.css">
+
+    <script src="components/Stock/StockCatalog.js"></script>
+    <script src="components/Stock/Stock.js"></script>
+    <link rel="stylesheet" href="components/Stock/Stock.css">
+</body>
+</html>

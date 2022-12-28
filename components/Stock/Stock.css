@@ -1,0 +1,25 @@
+#stock fieldset {
+    background-color: white;
+}
+
+#stock table {
+    margin-top: 30px;
+    margin-left: 30px;
+}
+
+#stock td {
+    width: 800px;
+}
+
+#stock th, td {
+    padding: 10px 15px;
+ }
+
+ .stocks-container {
+    list-style-type: none;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 45px;
+    width: 80%;
+    margin: 30px;
+}

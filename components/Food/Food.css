@@ -1,0 +1,73 @@
+.food-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 45px;
+    width: 80%;
+    margin: 30px;
+}
+
+.food-element {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 25px 20px;
+    background-color: rgb(255, 245, 157);
+    border-radius: 20px;
+    border: 1px solid black;
+}
+
+.food-element__name {
+    margin-bottom: auto;
+}
+
+.food-element__img {
+    width: 270px;
+    height: 270px;
+    object-fit: cover;
+}
+
+.categories-menu {
+    margin-top: 20px;
+    margin-left: 20px;
+}
+
+.ctg_btn {
+    margin-left: 150px;
+    background-color:#65b662;
+    color: #fff;
+    border:none;
+    border-radius:10px;
+    min-height:30px; 
+    min-width: 120px;
+}
+
+.ctg_btn:hover {
+    background-color: #26af21;
+}
+
+.ctg_btn__del {
+    margin-left: 150px;
+    background-color:#64a8f5;
+    color: #fff;
+    border:none;
+    border-radius:10px;
+    min-height:30px; 
+    min-width: 120px;
+}
+
+.ctg_btn__del:hover {
+	background-color: #0077ff;
+}
+
+.food-element__btn {
+    background-color:#ff9e43;
+    color: #fff;
+    border:none;
+    border-radius:10px;
+    min-height:30px; 
+    min-width: 120px;
+}
+
+.food-element__btn:hover {
+	background-color: #ff7b00;
+}
